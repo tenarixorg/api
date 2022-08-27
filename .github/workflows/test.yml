@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [16.x]
+        node: [18.x]
         os: [ubuntu-latest]
     env:
       NODE_ENV: development
@@ -21,9 +21,9 @@ jobs:
     name: Test - ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
@@ -31,4 +31,4 @@ jobs:
       - name: Lint
         run: yarn lint
       - name: Test
-        run: yarn test
+        run: yarn test:ci
