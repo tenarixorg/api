@@ -17,9 +17,6 @@ jobs:
         node: [18.x]
         os: [ubuntu-latest]
 
-    env:
-      NODE_ENV: production
-
     name: Build - ${{ matrix.os }}
 
     steps:
