@@ -31,4 +31,4 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Build
-        run: node scripts/build.js
+        run: node scripts/build.mjs
