@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.mjs",
     "dev": "node scripts/watch.js",
     "clean": "node scripts/clean.js",
     "test": "ava",
