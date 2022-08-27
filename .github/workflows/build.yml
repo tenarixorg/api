@@ -29,8 +29,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
-        run: |
-          npm i -g vite
-          yarn install
+        run: yarn install
       - name: Build
         run: yarn build
