@@ -31,4 +31,4 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
-        run: yarn build
+        run: ls -l node_modules/
