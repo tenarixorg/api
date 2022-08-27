@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 process.env.NODE_ENV = "production";
 
-import { build as viteBuild } from "../node_modules/vite/dist/node/index.js";
+import { build as viteBuild } from "vite";
 import chalk from "chalk";
 
 const TAG = chalk.bgBlue("[build.js]");
