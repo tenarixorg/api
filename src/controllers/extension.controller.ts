@@ -155,7 +155,9 @@ export const getOne = async (
     });
   }
 
-  const data = extension.versions[version];
+  const v_ = version === "latest" ? extension.latest : version;
+
+  const data = extension.versions[v_];
 
   if (!data) {
     return res.status(404).json({
@@ -169,7 +171,7 @@ export const getOne = async (
       author: extension.author,
       name: extension.name,
       lang: extension.lang,
-      version,
+      version: v_,
       ...data,
     },
   });
